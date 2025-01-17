@@ -25,7 +25,7 @@ namespace LeetCode_150
         public static ListNode Execute(ListNode l1, ListNode l2)
         {
 
-           
+            return Add_2(l1, l2);
 
         }
 
