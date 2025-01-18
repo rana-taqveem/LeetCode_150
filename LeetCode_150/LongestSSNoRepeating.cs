@@ -62,5 +62,80 @@ namespace LeetCode_150
 
 
         }
+
+
+        public static int LengthOfLongestSubstring_2(string s)
+        {
+
+            int maxLen = 0;
+            if (s.Length > 1)
+            {
+                char[] c = s.ToCharArray();
+                var set = new Dictionary<char, int>();
+                int index = 0;
+                int lastMarker = 0;
+                int len = 0;
+
+                while (index < c.Length)   // T, T
+                {
+                    if (set.TryGetValue(c[index], out lastMarker))
+                    {
+                        index = lastMarker + 1;
+                        if (len > maxLen)
+                        {
+                            maxLen = len;
+                        }
+
+                        set.Clear();
+                        len = 0;
+                        lastMarker = 0;
+
+                    }
+                    else
+                    {
+                        set.Add(c[index], index);
+                        index++;
+                        len++;
+                    }
+
+                }
+
+                if(len >  maxLen) maxLen = len;
+
+            }
+            
+
+
+            return maxLen;
+
+        }
+
+
+        public static int LengthOfLongestSubstring_3(string s)
+        {
+            int maxLen = 0;
+            var set = new HashSet<char>();
+            int index = 0;
+            int left = 0;
+            int len = 0;
+
+            while (index < s.Length)   // T, T
+            {
+                while (set.Contains(s[index]))
+                {
+                    set.Remove(s[left]);
+                    left++;
+
+                }
+
+                set.Add((s[index]));
+                maxLen = Math.Max(maxLen, index - left + 1);
+                index++;
+
+            }
+
+            return maxLen;
+        }
+
     }
 }

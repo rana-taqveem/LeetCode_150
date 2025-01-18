@@ -39,7 +39,7 @@
 
 
 
-            var re = LongestSSNoRepeating.LengthOfLongestSubstring("aab");
+            var re = LongestSSNoRepeating.LengthOfLongestSubstring_3("pwwkew");
             //AddTwoNumbers.Execute(l1, l2);
 
             //int[] nums2 = [1, 1, 5];
