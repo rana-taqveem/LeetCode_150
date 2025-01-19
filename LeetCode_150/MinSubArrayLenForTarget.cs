@@ -59,5 +59,36 @@ namespace LeetCode_150
             return minLen;
 
         }
+
+
+        public static int MinSubArrayLen_best(int target, int[] nums)
+        {
+            int minLen = 0;
+            int index = 0;
+            int sum = 0;
+            int left = 0;
+
+            while (index < nums.Length)
+            {
+                sum = sum + nums[index];
+
+                while (sum >= target)
+                {
+                    if (minLen == 0 && (index - left + 1) > 0)
+                    {
+                        minLen = index - left + 1;
+                    }
+
+                    minLen = Math.Min(minLen, index - left + 1);
+                    sum = sum - nums[left];
+                    left++;
+                }
+
+                index++;
+            }
+
+            return minLen;
+
+        }
     }
 }

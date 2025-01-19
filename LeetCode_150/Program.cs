@@ -37,9 +37,9 @@
             //l2.next.next = new ListNode();
             //l2.next.next.val = 4;
 
-            int[] nums = { 10, 2, 3 };
+            int[] nums = { 2, 2, 4 };
 
-            var res = MinSubArrayLenForTarget.MinSubArrayLen(6, nums);
+            var res = MinSubArrayLenForTarget.MinSubArrayLen_2(4, nums);
 
             //var re = LongestSSNoRepeating.LengthOfLongestSubstring_3("pwwkew");
             //AddTwoNumbers.Execute(l1, l2);
