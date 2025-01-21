@@ -1,4 +1,8 @@
-﻿namespace LeetCode_150
+﻿using System.Collections.Generic;
+using System;
+using System.Net.NetworkInformation;
+
+namespace LeetCode_150
 {
     internal class Program
     {
@@ -37,9 +41,9 @@
             //l2.next.next = new ListNode();
             //l2.next.next.val = 4;
 
-            int[] nums = { 2, 2, 4 };
+            //int[] nums = { 2, 2, 4 };
 
-            var res = MinSubArrayLenForTarget.MinSubArrayLen_2(4, nums);
+            //var res = MinSubArrayLenForTarget.MinSubArrayLen_2(4, nums);
 
             //var re = LongestSSNoRepeating.LengthOfLongestSubstring_3("pwwkew");
             //AddTwoNumbers.Execute(l1, l2);
@@ -48,6 +52,16 @@
             //int m = 1, n = 3;
 
             //MergeSortedArray.Merge_2(nums1,m, nums2, n);
+
+
+
+            string[] words = { "aa", "bb", "cc", "dd", "ee", "ff" };
+
+            GeneratePermutations.GeneratePerm(words);
+
         }
+
+
+       
     }
 }
