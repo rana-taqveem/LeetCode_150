@@ -57,7 +57,9 @@ namespace LeetCode_150
 
             string[] words = { "aa", "bb", "cc", "dd", "ee", "ff" };
 
-            GeneratePermutations.GeneratePerm(words);
+            //GeneratePermutations.GeneratePerm(words);
+
+            GeneratePermutations.Permute([ 1]);
 
         }
 

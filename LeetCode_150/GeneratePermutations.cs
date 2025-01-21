@@ -8,18 +8,30 @@ namespace LeetCode_150
 {
     public class GeneratePermutations
     {
+
+        public static IList<IList<int>> Permute(int[] nums)
+        {
+            var map = new HashSet<string>();
+            map.Add(string.Join("", nums));
+            var permutations = new List<IList<int>>();
+            permutations.Add(nums.ToList());
+            Generate_For_Num(nums, map, permutations);
+
+            return (IList < IList<int> > ) permutations;
+        }
+
         public static HashSet<string> GeneratePerm(string[] words)
         {
-            var wordsList = new HashSet<string>();
-            wordsList.Add(string.Join("", words));
-            Generate_2(words, wordsList);
+            var map = new HashSet<string>();
+            map.Add(string.Join("", words));
+            Generate_2(words, map);
 
-            return wordsList;
+            return map;
 
 
         }
 
-        private static void Generate_1(string[] words, HashSet<string> wordsList)
+        private static void Generate_1(string[] words, HashSet<string> map)
         {
             int index = 0;
             int marker = 0;
@@ -36,10 +48,10 @@ namespace LeetCode_150
                     currentPermutationString += words[j];
                 }
 
-                if (!wordsList.Contains(currentPermutationString))
+                if (!map.Contains(currentPermutationString))
                 {
-                    wordsList.Add(currentPermutationString);
-                    Generate_1(currentPermutation, wordsList);
+                    map.Add(currentPermutationString);
+                    Generate_1(currentPermutation, map);
                 }
 
                 index++;
@@ -48,7 +60,7 @@ namespace LeetCode_150
 
         }
 
-        private static void Generate_2(string[] words, HashSet<string> wordsList)
+        private static void Generate_2(string[] words, HashSet<string> map)
         {
             int index = 0;
             int marker = 0;
@@ -57,10 +69,10 @@ namespace LeetCode_150
                 Swap(words, index + 1, marker);
 
                 var currentPermutationString = string.Join("", words);
-                if (!wordsList.Contains(currentPermutationString))
+                if (!map.Contains(currentPermutationString))
                 {
-                    wordsList.Add(currentPermutationString);
-                    Generate_2(words, wordsList);
+                    map.Add(currentPermutationString);
+                    Generate_2(words, map);
                 }
 
                 Swap(words, index + 1, marker);
@@ -71,11 +83,35 @@ namespace LeetCode_150
 
         }
 
-        private static void Swap(string[] words, int index, int marker)
+        private static void Generate_For_Num(int[] nums, HashSet<string> map, List<IList<int>> permutations)
         {
-            var temp = words[index];
-            words[index] = words[marker];
-            words[marker] = temp;
+            int index = 0;
+            int marker = 0;
+            while (index < nums.Length - 1)
+            {
+                Swap(nums, index + 1, marker);
+
+                var currentPermutationString = string.Join("", nums);
+                if (!map.Contains(currentPermutationString))
+                {
+                    map.Add(currentPermutationString);
+                    permutations.Add(nums.ToList<int>());
+                    Generate_For_Num(nums, map, permutations);
+                }
+
+                Swap(nums, index + 1, marker);
+
+                index++;
+                marker++;
+            }
+
+        }
+
+        private static void Swap<T>(T[] arr, int index, int marker)
+        {
+            var temp = arr[index];
+            arr[index] = arr[marker];
+            arr[marker] = temp;
         }
     }
 }
