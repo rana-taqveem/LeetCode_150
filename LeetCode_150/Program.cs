@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.Net.NetworkInformation;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace LeetCode_150
 {
@@ -13,12 +14,7 @@ namespace LeetCode_150
 
             //int[] nums1 = [1, 2, 3, 0, 0, 0];
 
-
-
-
             //int[] nums2 = [2, 5, 6];
-
-
 
             //int[] nums1 = [2, 0, 0, 0];
 
@@ -54,12 +50,31 @@ namespace LeetCode_150
             //MergeSortedArray.Merge_2(nums1,m, nums2, n);
 
 
+            //string[] words = { "a", "b", "c", "d", "e", "f", "g" };
 
-            string[] words = { "aa", "bb", "cc", "dd", "ee", "ff" };
+            //string[] words = { "a", "b", "c" };
 
             //GeneratePermutations.GeneratePerm(words);
 
-            GeneratePermutations.Permute([ 1]);
+            //GeneratePermutations.Permute([ 1]);
+
+
+            int res = RemoveElement.RemoveElementFromArray([2,3,2,3,1], 2);
+            Console.WriteLine("[2,3,2,3,1], 2: " + res.ToString());
+            res = RemoveElement.RemoveElementFromArray([2, 3], 2);
+            Console.WriteLine("[2,3], 2: " + res.ToString());
+            res = RemoveElement.RemoveElementFromArray([3, 3], 2);
+            Console.WriteLine("[3, 3], 2: " + res.ToString());
+            res = RemoveElement.RemoveElementFromArray([2, 2], 2);
+            Console.WriteLine("[2, 2], 2: " + res.ToString());
+            res = RemoveElement.RemoveElementFromArray([2, 2, 3, 1, 0, 2, 4, 2], 2);
+            Console.WriteLine("[2, 2, 3, 1, 0, 2, 4, 2], 2: ", res.ToString());
+
+            res = RemoveElement.RemoveElementFromArray([0, 1, 2, 2, 3, 0, 4, 2], 2);
+            Console.WriteLine("[0,1,2,2,3,0,4,2], 2: " +  res.ToString());
+            
+
+
 
         }
 
