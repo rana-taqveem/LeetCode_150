@@ -59,19 +59,20 @@ namespace LeetCode_150
             //GeneratePermutations.Permute([ 1]);
 
 
-            int res = RemoveElement.RemoveElementFromArray([2,3,2,3,1], 2);
-            Console.WriteLine("[2,3,2,3,1], 2: " + res.ToString());
-            res = RemoveElement.RemoveElementFromArray([2, 3], 2);
-            Console.WriteLine("[2,3], 2: " + res.ToString());
-            res = RemoveElement.RemoveElementFromArray([3, 3], 2);
-            Console.WriteLine("[3, 3], 2: " + res.ToString());
-            res = RemoveElement.RemoveElementFromArray([2, 2], 2);
-            Console.WriteLine("[2, 2], 2: " + res.ToString());
-            res = RemoveElement.RemoveElementFromArray([2, 2, 3, 1, 0, 2, 4, 2], 2);
-            Console.WriteLine("[2, 2, 3, 1, 0, 2, 4, 2], 2: ", res.ToString());
+            int res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([2,3,3,4]);
+            Console.WriteLine("[2,3,3,4]: " + res.ToString());
+            res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([2, 3]);
+            Console.WriteLine("[2,3]: " + res.ToString());
+            res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([3, 3]);
+            Console.WriteLine("[3, 3]: " + res.ToString());
+            res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([1, 2, 2]);
+            Console.WriteLine("[1, 2, 2], 2: " + res.ToString());
 
-            res = RemoveElement.RemoveElementFromArray([0, 1, 2, 2, 3, 0, 4, 2], 2);
-            Console.WriteLine("[0,1,2,2,3,0,4,2], 2: " +  res.ToString());
+            res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([1, 1, 1, 2, 2, 3, 4, 4, 5]);
+            Console.WriteLine("[1, 1, 1, 2, 2, 3, 4, 4, 5]: " + res.ToString());
+
+            res = RemoveDuplicateSortedArray.RemoveDuplicateFromSortedArray([0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]);
+            Console.WriteLine("[0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]: " +  res.ToString());
             
 
 
