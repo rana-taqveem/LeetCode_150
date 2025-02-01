@@ -59,21 +59,33 @@ namespace LeetCode_150
             //GeneratePermutations.Permute([ 1]);
 
 
-            int res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([0, 0, 1, 1, 1, 1, 2, 3, 3]);
-            Console.WriteLine("[0,0,1,1,1,1,2,3,3]: " + res.ToString());
-            res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([2, 3]);
-            Console.WriteLine("[2,3]: " + res.ToString());
-            res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([3, 3]);
-            Console.WriteLine("[3, 3]: " + res.ToString());
-            res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([1, 2, 2]);
-            Console.WriteLine("[1, 2, 2], 2: " + res.ToString());
+            //int res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([0, 0, 1, 1, 1, 1, 2, 3, 3]);
+            //Console.WriteLine("[0,0,1,1,1,1,2,3,3]: " + res.ToString());
+            //res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([2, 3]);
+            //Console.WriteLine("[2,3]: " + res.ToString());
+            //res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([3, 3]);
+            //Console.WriteLine("[3, 3]: " + res.ToString());
+            //res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([1, 2, 2]);
+            //Console.WriteLine("[1, 2, 2], 2: " + res.ToString());
 
-            res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([1, 1, 1, 2, 2, 3, 4, 4, 5]);
-            Console.WriteLine("[1, 1, 1, 2, 2, 3, 4, 4, 5]: " + res.ToString());
+            //res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([1, 1, 1, 2, 2, 3, 4, 4, 5]);
+            //Console.WriteLine("[1, 1, 1, 2, 2, 3, 4, 4, 5]: " + res.ToString());
 
-            res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]);
-            Console.WriteLine("[0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]: " +  res.ToString());
-            
+            //res = RemoveDuplicateSortedArrayII.RemoveDuplicateFromSortedArray([0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]);
+            //Console.WriteLine("[0, 0, 0, 0, 1, 1, 2, 2, 2, 2, 3, 4, 40]: " +  res.ToString());
+
+
+            int res = MajorityElement.FindMajorityElement_Boyer_Moore_Voting([8,8, 7, 7, 7]);
+            Console.WriteLine("[1, 2, 2, 3]: " + res.ToString());
+
+            res = MajorityElement.FindMajorityElement_Boyer_Moore_Voting([1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3,3]);
+            Console.WriteLine("[1, 1, 1, 2, 2,2,2, 3,3,3,3,3]: " + res.ToString());
+
+
+            res = MajorityElement.FindMajorityElement_Boyer_Moore_Voting([2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3]);
+            Console.WriteLine("[2, 1, 1,1,1,1,1, 2,2,2,2,2,2,3]: " + res.ToString());
+
+
 
 
 
